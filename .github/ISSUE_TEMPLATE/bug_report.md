@@ -4,6 +4,7 @@ about: Create a report to help us improve
 title: 'Type '
 labels: ''
 assignees: ''
+types: 'bug'
 
 ---
 
