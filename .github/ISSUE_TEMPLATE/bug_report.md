@@ -1,10 +1,10 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: 'Type '
+title: ''
 labels: ''
 assignees: ''
-types: 'bug'
+type: 'bug'
 
 ---
 
