@@ -1,39 +1,106 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
-type: 'bug'
+# *******************************************************************************
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
 
----
-
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+name: Problem Report
+description: Issue to track a bug
+title: "Bug: Your bugfix title"
+labels: ["codeowner_review"]
+body:
+  - type: markdown
+    attributes:
+      value: "## <ins>Bug Ticket creation</ins>"
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        Description of the Bug
+        Root cause / Impact / Notification required?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Analysis results
+      description: |
+        Documentation of the analysis results
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Solution
+      description: |
+        Documentation of the solution
+        Link to Pull Request containing the solution
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Error Occurrence  Rate
+      options:
+        - Single Event
+        - Sporadic
+        - Highly Intermittent
+        - Reproducible
+  - type: textarea
+    attributes:
+      label: How to reproduce
+      description: How to reproduce?
+  - type: textarea
+    attributes:
+      label: Supporting Information
+      description: |
+        During which operational state did the issue occur
+        Observations / Screenshots / Traces
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: Classification
+      options:
+        - minor
+        - major
+        - critical
+        - blocker
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Affected Version
+      options:
+        - pre-0.5
+        - 0.5
+        - 1.0
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Expected Closure Version
+      options:
+        - 0.5
+        - 1.0
+      default: 0
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: Category
+      options:
+        - label: Safety Related
+        - label: Security Related
+  - type: textarea
+    attributes:
+      label: ASIL classification
+      description: Add ASIL classification, e.g. ASIL_B or ASIL_D
+    validations:
+      required: false
